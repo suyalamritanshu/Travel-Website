@@ -2,7 +2,6 @@ base_url = 'https://travel-backend-personal.herokuapp.com';
 
 function loginUser() {
     var data = JSON.stringify({
-        "from": document.getElementById("book_from").value,
         "to": document.getElementById("book_to").value,
         "date": document.getElementById("book_date").value,
 

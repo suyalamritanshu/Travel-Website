@@ -436,10 +436,13 @@ input {
 
 .about__img-one {
   width: 130px;
+  height: 250px;
 }
 
 .about__img-two {
   width: 180px;
+  height: 350px;
+
 }
 
 .about__img-one, 
