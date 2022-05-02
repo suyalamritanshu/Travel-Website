@@ -143,19 +143,24 @@ video {
   height: auto;
 }
 
-button,
-input {
-  border: none;
+button {
+  border: black;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
 
+
+input {
+  border: black;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
 button {
   cursor: pointer;
 }
 
 input {
-  outline: none;
+  outline: black;
 }
 
 .main {
@@ -477,6 +482,7 @@ input {
 
 .discover__img {
   transition: var(--img-transition);
+  height: 20rem;
 }
 
 .discover__img:hover {
@@ -522,6 +528,9 @@ input {
   transition: var(--img-transition);
 }
 
+.experience__img-two{
+  height: 18rem;
+}
 .experience__img-one:hover, 
 .experience__img-two:hover {
   transform: var(--img-scale);
