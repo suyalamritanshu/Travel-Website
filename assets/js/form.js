@@ -66,7 +66,7 @@ function signinUser() {
 
     var config = {
         method: 'post',
-        url:  'https://travel-backend-personal.herokuapp.com/api/signup',
+        url:  'https://travel-backend-personal.herokuapp.com/api/login',
         headers: {
             'Content-Type': 'application/json'
         },
