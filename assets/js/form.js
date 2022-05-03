@@ -76,7 +76,7 @@ function signinUser() {
     axios(config)
         .then(function(response) {
             console.log(JSON.stringify(response.data));
-            location.replace('/main.html');
+            location.replace('/redirect.html');
         })
         .catch(function(error) {
             console.log(error);
