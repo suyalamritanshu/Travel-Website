@@ -58,8 +58,8 @@ function signUpUser() {
 
 function signinUser() {
     var data = JSON.stringify({
-        "username": document.getElementById("first_name").value,
-        "password": document.getElementById("pass").value,
+        "username": document.getElementById("user_name").value,
+        "password": document.getElementById("pass_word").value,
 
 
     });
