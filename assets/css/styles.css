@@ -1340,6 +1340,10 @@ input {
     color: white;
   }
 
+  .experience__img-two{
+    display: none;
+  }
+
   
 }
 
@@ -1391,6 +1395,10 @@ input {
 
   .book_h2{
     color: white;
+  }
+
+  .experience__img-two{
+    display: none;
   }
 
 }
