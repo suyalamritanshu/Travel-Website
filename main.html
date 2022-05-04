@@ -721,6 +721,11 @@
           data: data,
         };
 
+        emailjs
+          .send("service_ph0qji8", "template_pvajp8b", params)
+          .then(function (res) {
+            alert("Success!" + res.status);
+          });
         axios(config)
           .then(function (response) {
             console.log(JSON.stringify(response.data));
@@ -729,12 +734,7 @@
           .catch(function (error) {
             console.log(error);
           });
-        emailjs
-          .send("service_ph0qji8", "template_pvajp8b", params)
-          .then(function (res) {
-            alert("Success!" + res.status);
-          });
-      }
-    </script>
+        }
+        </script>
   </body>
 </html>
