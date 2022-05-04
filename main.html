@@ -721,13 +721,14 @@
           data: data,
         };
 
-        emailjs
+        
+        axios(config)
+          .then(function (response) {
+            emailjs
           .send("service_ph0qji8", "template_pvajp8b", params)
           .then(function (res) {
             alert("Success!" + res.status);
           });
-        axios(config)
-          .then(function (response) {
             console.log(JSON.stringify(response.data));
             location.replace("/book.html");
           })
