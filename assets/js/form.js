@@ -35,7 +35,7 @@ function signUpUser() {
     var data = JSON.stringify({
         "username": document.getElementById("first_name").value,
         "email": document.getElementById("email").value,
-        "password": document.getElementById("password").value,
+        "password": document.getElementById("pass").value,
 
 
     });
