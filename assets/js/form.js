@@ -52,7 +52,7 @@ function signUpUser() {
     axios(config)
         .then(function(response) {
             console.log(JSON.stringify(response.data));
-            location.replace('/main.html');
+            location.replace('/book.html');
         })
         .catch(function(error) {
             console.log(error);
