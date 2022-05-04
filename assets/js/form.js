@@ -23,7 +23,7 @@ function loginUser() {
     axios(config)
         .then(function(response) {
             console.log(JSON.stringify(response.data));
-            location.replace('/book.html');
+            location.replace('/main.html');
         })
         .catch(function(error) {
             console.log(error);
@@ -52,7 +52,7 @@ function signUpUser() {
     axios(config)
         .then(function(response) {
             console.log(JSON.stringify(response.data));
-            location.replace('/book.html');
+            location.replace('/main.html');
         })
         .catch(function(error) {
             console.log(error);
