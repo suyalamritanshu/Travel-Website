@@ -531,8 +531,10 @@ input {
   transition: var(--img-transition);
 }
 
-.experience__img-two{
-  height: 18rem;
+.experience__overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .experience__img-one:hover, 
 .experience__img-two:hover {
@@ -1340,9 +1342,7 @@ input {
     color: white;
   }
 
-  .experience__img-two{
-    display: none;
-  }
+  
 
   
 }
@@ -1397,9 +1397,7 @@ input {
     color: white;
   }
 
-  .experience__img-two{
-    display: none;
-  }
+  
 
 }
 
