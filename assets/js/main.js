@@ -73,7 +73,7 @@ function playPause(){
 
     }
 }
-videoButton.addEventListener('click', playPause)
+// videoButton.addEventListener('click', playPause)
 
 function finalVideo(){
     // Video ends, icon change
