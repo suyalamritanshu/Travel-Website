@@ -16,32 +16,64 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
 
-
     <title>Travel With Us</title>
   </head>
-<body>
-    <div class="flex items-center h-screen w-full bg-teal-lighter">
-        <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
-            <h1 class="block w-full text-center text-grey-darkest mb-6">Sign Up</h1>
-            <form class="mb-4 md:flex md:flex-wrap md:justify-between" >
-                <div class="field-group mb-4 md:w-1/2">
-                    <label class="field-label" for="first_name">Username</label>
-                    <input class="field md:mr-2" type="text" name="first_name" id="first_name">
+  <body>
+
+
+      <img
+          src="https://images.unsplash.com/photo-1592058879796-8378fba3961f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8a3VsbHUlMjBtYW5hbGl8ZW58MHx8MHx8&w=1000&q=80"
+          alt=""
+          class="home_img "
+        />
+
+        <div class="home_container container grid">
+          <div class="home__data">
+
+            <div class="flex items-center h-screen w-full   ">
+                <div
+                  class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto"
+                >
+                  <h1 class="block w-full text-center text-grey-darkest mb-6">Sign Up</h1>
+                  <form class="mb-4 md:flex md:flex-wrap md:justify-between">
+                    <div class="field-group mb-4 md:w-1/2">
+                      <label class="field-label" for="first_name">Username</label>
+                      <input
+                        class="field md:mr-2"
+                        type="text"
+                        name="first_name"
+                        id="first_name"
+                      />
+                    </div>
+                    <div class="field-group mb-4 md:w-full">
+                      <label class="field-label" for="email">Email</label>
+                      <input class="field" type="email" name="email" id="email" />
+                    </div>
+                    <div class="field-group mb-6 md:w-full">
+                      <label class="field-label" for="password">Password</label>
+                      <input class="field" type="password" name="password" id="pass" />
+                    </div>
+                    <button
+                      class="btn btn-teal mx-auto"
+                      type="button"
+                      onclick="signUpUser()"
+                    >
+                      Create Account
+                    </button>
+                  </form>
                 </div>
-                <div class="field-group mb-4 md:w-full">
-                    <label class="field-label" for="email">Email</label>
-                    <input class="field" type="email" name="email" id="email">
-                </div>
-                <div class="field-group mb-6 md:w-full">
-                    <label class="field-label" for="password">Password</label>
-                    <input class="field" type="password" name="password" id="pass">
-                </div>
-                <button class="btn btn-teal mx-auto" type="button" onclick="signUpUser()">Create Account</button>
-            </form>
-           
+              </div>
+            
+          </div>
+
+          
+
+         
         </div>
-    </div>
-</body>
+    
+      />
+    
+  </body>
 </html>
 
 <script src="assets/js/scrollreveal.min.js"></script>

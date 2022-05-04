@@ -81,7 +81,7 @@ function finalVideo(){
     videoIcon.classList.add('ri-play-line')
 }
 // ended, when the video ends
-videoFile.addEventListener('ended', finalVideo)
+// videoFile.addEventListener('ended', finalVideo)
 
 
 /*==================== SHOW SCROLL UP ====================*/ 
