@@ -63,7 +63,11 @@
   padding-top: 2rem;
   padding: 2rem;
   transition: var(--img-transition);
-    
+
+}
+
+.heading_img{
+    color: white;
 }
 
 .vashisht_img {
