@@ -115,6 +115,8 @@
 .old_para {
   padding: 2rem;
   margin-top: 2rem;
+  color: white;
+
 }
 
 .main_blog {
@@ -129,8 +131,9 @@ padding-bottom: 4rem;
     align-items: center;
     justify-content: center ;
     margin-top: 2rem;
+    color: white;
 }
 
 body{
-    color: #162527;
+   background-color: #162527;
 }
