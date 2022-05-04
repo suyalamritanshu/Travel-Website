@@ -4,6 +4,10 @@ function loginUser() {
     var data = JSON.stringify({
         "to": document.getElementById("book_to").value,
         "date": document.getElementById("book_date").value,
+        "name": document.getElementById("book_name").value,
+        "phone": document.getElementById("book_number").value,
+        "email": document.getElementById("book_email").value,
+
 
     });
 

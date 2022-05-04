@@ -128,21 +128,33 @@
           <div class="about__data">
             <h2 class="section__title about__title">
               More Information <br />
-              About Manali    
+              About Manali
             </h2>
             <p class="about__description">
-              Situated near the end of valley, Manali is one of the most attractive tourist spot not only of Himachal Pradesh, but of International fame also. Manali is synonymous streams and birdsong, forests and orchards and grandees of snow-capped mountains.
+              Situated near the end of valley, Manali is one of the most
+              attractive tourist spot not only of Himachal Pradesh, but of
+              International fame also. Manali is synonymous streams and
+              birdsong, forests and orchards and grandees of snow-capped
+              mountains.
             </p>
             <a href="#book" class="button">Reserve a slot now</a>
           </div>
 
           <div class="about__img">
             <div class="about__img-overlay">
-              <img src="https://imgk.timesnownews.com/story/EimQgTAUMAExkoG.jpg?tr=w-1200,h-900" alt="" class="about__img-one" />
+              <img
+                src="https://imgk.timesnownews.com/story/EimQgTAUMAExkoG.jpg?tr=w-1200,h-900"
+                alt=""
+                class="about__img-one"
+              />
             </div>
 
             <div class="about__img-overlay">
-              <img src="https://www.holidify.com/images/cmsuploads/compressed/attr_1888_20190308172811.jpg" alt="" class="about__img-two" />
+              <img
+                src="https://www.holidify.com/images/cmsuploads/compressed/attr_1888_20190308172811.jpg"
+                alt=""
+                class="about__img-two"
+              />
             </div>
           </div>
         </div>
@@ -315,24 +327,61 @@
             get your place now.
           </p>
           <form class="book_form">
-            
             <div class="book_form-group">
               <label for="text" class="book_form-label">Where </label>
-             
 
-             
-          
-                <select class="book__form-input">
-                  <option class="book__form-input" >Select</option>
+              <select class="book__form-input">
+                <option class="book__form-input">Select</option>
 
-                  <option class="book__form-input" id="book_to">Atal Tunnel</option>
-                  <option class="book__form-input" id="book_to">Solang Valley</option>
-                  <option class="book__form-input" id="book_to">Hadimba Temple</option>
-                  <option class="book__form-input" id="book_to">Manu Temple</option>
-                  <option class="book__form-input" id="book_to">Vashisht Temple</option>
-  
-                </select>
-              
+                <option class="book__form-input" id="book_to">
+                  Atal Tunnel
+                </option>
+                <option class="book__form-input" id="book_to">
+                  Solang Valley
+                </option>
+                <option class="book__form-input" id="book_to">
+                  Hadimba Temple
+                </option>
+                <option class="book__form-input" id="book_to">
+                  Manu Temple
+                </option>
+                <option class="book__form-input" id="book_to">
+                  Vashisht Temple
+                </option>
+              </select>
+            </div>
+
+            <div class="book_form-group">
+              <label for="date" class="book_form-label">Name</label>
+              <input
+                type="text"
+                name="text"
+                id="book_name"
+                class="book__form-input"
+                placeholder="Enter your name"
+              />
+            </div>
+
+            <div class="book_form-group">
+              <label for="date" class="book_form-label">Phone</label>
+              <input
+                type="number"
+                name="number"
+                id="book_number"
+                class="book__form-input"
+                placeholder="Enter your number"
+              />
+            </div>
+
+            <div class="book_form-group">
+              <label for="date" class="book_form-label">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="book_email"
+                class="book__form-input"
+                placeholder="Enter your email"
+              />
             </div>
 
             <div class="book_form-group">
@@ -346,7 +395,7 @@
               />
             </div>
           </form>
-          <button class="button_book" type="button" onclick="loginUser()">
+          <button class="button_book" onclick="SendMail()" type="button">
             BOOK NOW
           </button>
         </div>
@@ -630,5 +679,62 @@
     <script src="assets/js/form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript">
+      (function () {
+        // emailjs.init("USERID");
+        emailjs.init("user_6wIJS1prmLBDYwW85H2VO");
+      })();
+
+      // User ID
+      // user_id
+      // Access Token
+      // random_access-token
+
+      function SendMail() {
+        var params = {
+          name: document.getElementById("book_name").value,
+          date: document.getElementById("book_date").value,
+          to: document.getElementById("book_to").value,
+          email: document.getElementById("book_email").value,
+          phone: document.getElementById("book_number").value,
+        };
+
+        var data = JSON.stringify({
+          to: document.getElementById("book_to").value,
+          date: document.getElementById("book_date").value,
+          name: document.getElementById("book_name").value,
+          phone: document.getElementById("book_number").value,
+          email: document.getElementById("book_email").value,
+        });
+        var config = {
+          method: "post",
+          url: "https://travel-backend-personal.herokuapp.com/api/tour",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          data: data,
+        };
+
+        axios(config)
+          .then(function (response) {
+            console.log(JSON.stringify(response.data));
+            location.replace("/book.html");
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        emailjs
+          .send("service_ph0qji8", "template_pvajp8b", params)
+          .then(function (res) {
+            alert("Success!" + res.status);
+          });
+      }
+    </script>
   </body>
 </html>
